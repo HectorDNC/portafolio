@@ -1,4 +1,17 @@
-export const projects = [
+export type Project = {
+    id: number;
+    title: string;
+    description: string;
+    category: string;
+    tech: string[];
+    gradient: string;
+    accent: string;
+    year: string;
+    link: string;
+    img?: string;
+};
+
+export const projects: Project[] = [
   {
     id: 1,
     title: "Sistema de Gestión Logística",
@@ -8,7 +21,9 @@ export const projects = [
     tech: ["Spring Boot", "Angular", "SQL", "AWS", "Jenkins"],
     gradient: "from-blue-500/20 to-cyan-600/20",
     accent: "bg-blue-500/10 text-blue-300 border-blue-500/20",
+    year: "2024",
     link: "#",
+    // img: "/projects/project1.png",
   },
   {
     id: 2,
@@ -19,6 +34,7 @@ export const projects = [
     tech: ["Spring Boot", "Angular", "SQL", "AWS", "Jenkins"],
     gradient: "from-blue-500/20 to-cyan-600/20",
     accent: "bg-blue-500/10 text-blue-300 border-blue-500/20",
+    year: "2024",
     link: "#",
   },
   {
@@ -30,6 +46,7 @@ export const projects = [
     tech: ["Spring Boot", "Angular", "SQL", "AWS"],
     gradient: "from-indigo-500/20 to-blue-600/20",
     accent: "bg-indigo-500/10 text-indigo-300 border-indigo-500/20",
+    year: "2025",
     link: "#",
   },
   {
@@ -41,6 +58,7 @@ export const projects = [
     tech: ["React JS", "Spring Boot", "PostgreSQL", "Pasarela de Pagos"],
     gradient: "from-purple-500/20 to-pink-600/20",
     accent: "bg-purple-500/10 text-purple-300 border-purple-500/20",
+    year: "2025",
     link: "#",
   },
   {
@@ -52,6 +70,7 @@ export const projects = [
     tech: ["React JS", "Node.js", "Express.js", "MySQL"],
     gradient: "from-orange-500/20 to-red-600/20",
     accent: "bg-orange-500/10 text-orange-300 border-orange-500/20",
+    year: "2025",
     link: "#",
   },
   {
@@ -63,6 +82,7 @@ export const projects = [
     tech: ["Spring Boot", "Java", "AWS", "SQL"],
     gradient: "from-green-500/20 to-emerald-600/20",
     accent: "bg-green-500/10 text-green-300 border-green-500/20",
+    year: "2026",
     link: "#",
   },
   {
@@ -74,6 +94,7 @@ export const projects = [
     tech: ["Jenkins", "AWS", "Git"],
     gradient: "from-slate-500/20 to-gray-700/20",
     accent: "bg-slate-500/10 text-slate-300 border-slate-500/20",
+    year: "2026",
     link: "#",
   },
   {
@@ -85,6 +106,7 @@ export const projects = [
     tech: ["Angular", "Spring Boot", "SQL"],
     gradient: "from-yellow-500/20 to-amber-600/20",
     accent: "bg-yellow-500/10 text-yellow-300 border-yellow-500/20",
+    year: "2026",
     link: "#",
   },
 ];

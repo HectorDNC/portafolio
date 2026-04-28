@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Footer from "./Footer";
 
 const contactInfo = [
   {
@@ -253,15 +254,7 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* Footer */}
-      <div className="relative max-w-7xl mx-auto px-6 mt-24 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p className="text-white/25 text-sm">
-          © 2026 Hector David Noguera Carmona. Todos los derechos reservados.
-        </p>
-        <p className="text-white/25 text-sm">
-          Construido con Next.js & Tailwind CSS
-        </p>
-      </div>
+      <Footer />
     </section>
   );
 }

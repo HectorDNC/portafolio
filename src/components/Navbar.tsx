@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 const navLinks = [
   { id: "home", label: "Inicio" },
@@ -11,11 +12,17 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const router = useRouter();
+  const pathname = usePathname();
   const [active, setActive] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    if (pathname !== "/") {
+      return;
+    }
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
       const sections = navLinks.map(({ id }) => document.getElementById(id));
@@ -28,9 +35,15 @@ export default function Navbar() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
 
   const scrollTo = (id: string) => {
+    if (pathname !== "/") {
+      router.push(`/#${id}`);
+      setMenuOpen(false);
+      return;
+    }
+
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     setMenuOpen(false);
   };
@@ -38,7 +51,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+        pathname !== "/" || scrolled
           ? "bg-black/40 backdrop-blur-xl shadow-lg"
           : "bg-transparent"
       }`}
@@ -47,7 +60,13 @@ export default function Navbar() {
         {/* Logo + Divider */}
         <div className="flex items-center gap-5 ml-1 lg:ml-2">
           <button
-            onClick={() => scrollTo("home")}
+            onClick={() => {
+              if (pathname !== "/") {
+                router.push("/");
+                return;
+              }
+              scrollTo("home");
+            }}
             className="flex items-center group"
           >
             <Image
