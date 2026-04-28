@@ -1,12 +1,13 @@
 "use client";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const navLinks = [
-  { id: "home", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "proyectos", label: "Portfolio" },
-  { id: "contacto", label: "Contact" },
-  { id: "faq", label: "FAQ" },
+  { id: "home", label: "Inicio" },
+  { id: "projects", label: "Portafolio" },
+  { id: "skills", label: "Habilidades" },
+  { id: "contact", label: "Contacto" },
+  // { id: "about", label: "Sobre mí" },
 ];
 
 export default function Navbar() {
@@ -38,43 +39,24 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-black/80 backdrop-blur-xl border-b border-white/5 shadow-lg"
+          ? "bg-black/40 backdrop-blur-xl shadow-lg"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo + Divider */}
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-5 ml-1 lg:ml-2">
           <button
             onClick={() => scrollTo("home")}
             className="flex items-center group"
           >
-            <svg
-              width="36"
-              height="22"
-              viewBox="0 0 40 24"
-              fill="none"
-              className="text-white"
-            >
-              <path
-                d="M13 12C13 8.13 16.13 5 20 5C23.87 5 27 8.13 27 12C27 15.87 23.87 19 20 19"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-              />
-              <path
-                d="M27 12C27 8.13 30.13 5 34 5C37.87 5 41 8.13 41 12C41 15.87 37.87 19 34 19C30.13 19 27 15.87 27 12Z"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-              />
-              <path
-                d="M13 12C13 15.87 9.87 19 6 19C2.13 19 -1 15.87 -1 12C-1 8.13 2.13 5 6 5C9.87 5 13 8.13 13 12Z"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-              />
-            </svg>
+            <Image
+              src="/logo.webp"
+              alt="Logo"
+              width={45}
+              height={25}
+              className="w-[65px] h-[auto] lg:w-[60px] transition-transform duration-200 group-hover:scale-110"
+            />
           </button>
           {/* Vertical divider */}
           <div className="hidden md:block w-px h-6 bg-white/20" />
@@ -99,10 +81,10 @@ export default function Navbar() {
 
         {/* CTA Button */}
         <button
-          onClick={() => scrollTo("contacto")}
+          onClick={() => scrollTo("contact")}
           className="hidden md:flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200 shadow-lg shadow-blue-600/30"
         >
-          Get In Touch
+          Contactar
         </button>
 
         {/* Mobile menu button */}
@@ -148,10 +130,10 @@ export default function Navbar() {
             </button>
           ))}
           <button
-            onClick={() => scrollTo("contacto")}
+            onClick={() => scrollTo("contact")}
             className="mt-2 bg-blue-600 text-white text-sm font-semibold px-5 py-3 rounded-full"
           >
-            Get In Touch
+            Contactar
           </button>
         </div>
       )}

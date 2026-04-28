@@ -18,46 +18,40 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-20 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-6 pt-20 lg:pt-30 pb-20 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left content */}
         <div className="flex flex-col gap-6">
           {/* Badge */}
-          <div className="flex items-center gap-2 w-fit">
+          {/* <div className="flex items-center gap-2 w-fit">
             <span className="bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded-md">
               NEW
             </span>
             <span className="text-white/60 text-sm bg-white/5 border border-white/10 px-3 py-1 rounded-full">
-              Disponible para proyectos 2025
+              Disponible para proyectos 2026
             </span>
-          </div>
+          </div> */}
 
           {/* Heading */}
           <div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-tight text-white">
               Desarrollador
             </h1>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-tight text-white/50">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-tight text-white/60">
               Full Stack.
             </h1>
           </div>
 
           {/* Description */}
           <p className="text-white/50 text-lg leading-relaxed max-w-md">
-            Creo experiencias digitales únicas que ayudan a los negocios a
-            crecer y destacar. Especializado en aplicaciones web modernas y
-            escalables.
+            Desarrollador Full Stack con más de 5 años de experiencia construyendo
+            software robusto y escalable. Especializado en Java, Spring Boot,
+            Angular y React con fuerte enfoque en calidad y procesos ágiles.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-3 pt-2">
             <a
-              href="#contacto"
-              className="bg-white text-black font-semibold px-6 py-3 rounded-full hover:bg-white/90 transition-all duration-200 text-sm"
-            >
-              Conectar
-            </a>
-            <a
-              href="#proyectos"
+              href="#projects"
               className="bg-white/5 border border-white/15 text-white font-semibold px-6 py-3 rounded-full hover:bg-white/10 transition-all duration-200 text-sm"
             >
               Ver Proyectos
@@ -69,7 +63,7 @@ export default function Hero() {
             <span className="text-white/25 text-xs uppercase tracking-widest font-medium">
               Tech Stack
             </span>
-            {["React", "Next.js", "TypeScript", "Node"].map((tech) => (
+            {["Java", "Spring Boot", "Angular", "React", "Node.js", "AWS"].map((tech) => (
               <span
                 key={tech}
                 className="text-white/40 text-sm font-medium hover:text-white/70 transition-colors"
@@ -81,31 +75,31 @@ export default function Hero() {
         </div>
 
         {/* Right: floating card */}
-        <div className="hidden lg:flex items-center justify-center relative">
+        <div className="flex items-center justify-center relative">
           {/* Decorative corner lines */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="w-80 h-80 border border-white/5 rounded-2xl" />
-            <div className="absolute w-64 h-64 border border-white/5 rounded-2xl rotate-12" />
+            <div className="w-96 h-80 border border-white/5 rounded-2xl" />
+            <div className="absolute w-72 h-64 border border-white/5 rounded-2xl rotate-12" />
           </div>
 
           {/* Main card */}
-          <div className="relative z-10 card-dark rounded-2xl p-8 w-72 shadow-2xl">
+          <div className="relative z-10 card-dark rounded-2xl p-8 w-80 shadow-2xl">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-blue-600/40">
                 H
               </div>
               <div>
-                <p className="text-white font-semibold">Hector M.</p>
-                <p className="text-white/40 text-sm">Full Stack Dev</p>
+                <p className="text-white font-semibold">Hector Noguera</p>
+                <p className="text-white/40 text-sm">Full Stack Developer</p>
               </div>
               <div className="ml-auto w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             </div>
 
             <div className="space-y-3">
               {[
-                { label: "Proyectos", value: "12+", color: "text-blue-400" },
-                { label: "Experiencia", value: "3+ años", color: "text-purple-400" },
-                { label: "Tecnologías", value: "10+", color: "text-green-400" },
+                { label: "Proyectos", value: `10+`, color: "text-blue-400" },
+                { label: "Experiencia", value: `${new Date().getFullYear() - 2021}+ años`, color: "text-purple-400" },
+                { label: "Tecnologías", value: "12+", color: "text-green-400" },
               ].map(({ label, value, color }) => (
                 <div
                   key={label}
@@ -129,7 +123,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+      <div className="absolute bottom-6 lg:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
         <div className="w-px h-12 bg-gradient-to-b from-white/30 to-transparent" />
         <svg
           width="16"

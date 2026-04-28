@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hector | Portafolio",
+  title: "Hector Noguera | Portafolio",
   description: "Desarrollador Full Stack — Proyectos, habilidades y contacto.",
 };
 

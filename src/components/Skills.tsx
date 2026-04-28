@@ -1,90 +1,90 @@
 const skills = [
   {
-    name: "React",
+    name: "Java",
+    subtitle: "Lenguaje Principal",
+    description:
+      "Desarrollo backend robusto con Java, aplicando patrones de diseño, POO y arquitecturas limpias.",
+    icon: "☕",
+    bg: "from-orange-500 to-red-600",
+    shadow: "shadow-orange-500/20",
+  },
+  {
+    name: "Spring Boot",
+    subtitle: "Backend Framework",
+    description:
+      "Construcción de microservicios y APIs REST escalables con Spring Boot, Spring Security y JPA.",
+    icon: "🌱",
+    bg: "from-green-500 to-green-700",
+    shadow: "shadow-green-500/20",
+  },
+  {
+    name: "Angular",
+    subtitle: "Frontend Framework",
+    description:
+      "Interfaces empresariales con Angular, RxJS, gestión de estado y componentes reutilizables.",
+    icon: "▲",
+    bg: "from-red-500 to-rose-700",
+    shadow: "shadow-red-500/20",
+  },
+  {
+    name: "React JS",
     subtitle: "UI Library",
     description:
-      "Construcción de interfaces interactivas con componentes reutilizables y gestión de estado avanzada.",
+      "Aplicaciones SPA y multiplataforma con React, hooks, context y gestión de estado avanzada.",
     icon: "⚛",
     bg: "from-cyan-400 to-blue-500",
     shadow: "shadow-cyan-500/20",
   },
   {
-    name: "Next.js",
-    subtitle: "Framework",
-    description:
-      "Aplicaciones full-stack con SSR, SSG, App Router y optimizaciones de rendimiento.",
-    icon: "▲",
-    bg: "from-gray-600 to-gray-800",
-    shadow: "shadow-gray-500/20",
-  },
-  {
-    name: "TypeScript",
-    subtitle: "Tipado Estático",
-    description:
-      "Código robusto y mantenible con tipado fuerte, interfaces y patrones avanzados.",
-    icon: "TS",
-    bg: "from-blue-500 to-blue-700",
-    shadow: "shadow-blue-500/20",
-  },
-  {
     name: "Node.js",
     subtitle: "Backend Runtime",
     description:
-      "APIs REST y GraphQL de alto rendimiento con Express, Fastify y arquitectura limpia.",
+      "APIs REST de alto rendimiento con Node.js y Express.js para aplicaciones en tiempo real.",
     icon: "⬡",
-    bg: "from-green-500 to-green-700",
-    shadow: "shadow-green-500/20",
+    bg: "from-green-400 to-emerald-600",
+    shadow: "shadow-emerald-500/20",
   },
   {
-    name: "Tailwind CSS",
-    subtitle: "Estilos",
+    name: "JavaScript",
+    subtitle: "Lenguaje",
     description:
-      "Diseño moderno y responsivo con utility-first CSS, sistemas de diseño y animaciones.",
-    icon: "◈",
-    bg: "from-cyan-500 to-teal-600",
-    shadow: "shadow-teal-500/20",
+      "Dominio avanzado de JS moderno: ES6+, programación funcional, async/await y patrones.",
+    icon: "JS",
+    bg: "from-yellow-400 to-yellow-600",
+    shadow: "shadow-yellow-500/20",
   },
   {
-    name: "PostgreSQL",
+    name: "SQL",
     subtitle: "Base de Datos",
     description:
-      "Modelado relacional, consultas optimizadas, migraciones y ORMs como Prisma.",
-    icon: "🐘",
+      "Diseño relacional, consultas optimizadas, procedimientos almacenados y modelado de datos.",
+    icon: "🗄",
     bg: "from-blue-400 to-indigo-600",
     shadow: "shadow-indigo-500/20",
   },
   {
-    name: "Docker",
-    subtitle: "DevOps",
+    name: "AWS",
+    subtitle: "Cloud",
     description:
-      "Contenedores, compose, pipelines CI/CD y despliegues en ambientes reproducibles.",
-    icon: "◻",
-    bg: "from-blue-500 to-sky-600",
-    shadow: "shadow-sky-500/20",
+      "Gestión y monitoreo de servicios cloud en AWS para aplicaciones de producción a escala.",
+    icon: "☁",
+    bg: "from-orange-400 to-amber-600",
+    shadow: "shadow-amber-500/20",
   },
   {
-    name: "Git",
-    subtitle: "Control de Versiones",
+    name: "Jenkins",
+    subtitle: "CI/CD",
     description:
-      "Flujos de trabajo colaborativos, estrategias de branching y revisión de código.",
-    icon: "⌥",
-    bg: "from-orange-500 to-red-600",
-    shadow: "shadow-orange-500/20",
-  },
-  {
-    name: "MongoDB",
-    subtitle: "NoSQL",
-    description:
-      "Modelos de datos flexibles, agregaciones y optimización para aplicaciones a escala.",
-    icon: "◉",
-    bg: "from-green-400 to-green-700",
-    shadow: "shadow-green-500/20",
+      "Implementación de pipelines de integración y despliegue continuo para automatización de entregas.",
+    icon: "⚙",
+    bg: "from-slate-500 to-slate-700",
+    shadow: "shadow-slate-500/20",
   },
 ];
 
 export default function Skills() {
   return (
-    <section id="habilidades" className="relative py-32 overflow-hidden">
+    <section id="skills" className="relative py-20 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 glow-blue-center pointer-events-none" />
 
