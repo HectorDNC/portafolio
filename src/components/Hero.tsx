@@ -1,4 +1,9 @@
+"use client";
+import Image from "next/image";
+import { useState } from "react";
+
 export default function Hero() {
+  const [imgLoaded, setImgLoaded] = useState(false);
   return (
     <section
       id="home"
@@ -33,10 +38,10 @@ export default function Hero() {
 
           {/* Heading */}
           <div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-tight text-white">
+            <h1 className="text-5xl md:text-6xl lg:text-8xl font-light leading-tight text-white font-weight-400">
               Desarrollador
             </h1>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-tight text-white/60">
+            <h1 className="text-5xl md:text-6xl lg:text-8xl font-light leading-tight text-white/60 font-weight-400">
               Full Stack.
             </h1>
           </div>
@@ -78,16 +83,25 @@ export default function Hero() {
         <div className="flex items-center justify-center relative">
           {/* Decorative corner lines */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="w-96 h-80 border border-white/5 rounded-2xl" />
-            <div className="absolute w-72 h-64 border border-white/5 rounded-2xl rotate-12" />
+            <div className="w-[84%] h-80 border border-white/5 rounded-2xl" />
+            <div className="absolute w-[75%] h-64 border border-white/5 rounded-2xl rotate-12" />
           </div>
 
           {/* Main card */}
-          <div className="relative z-10 card-dark rounded-2xl p-8 w-80 shadow-2xl">
+          <div className="relative z-10 card-dark rounded-2xl p-8 w-[80%] shadow-2xl">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-blue-600/40">
-                H
-              </div>
+                <div className="relative w-16 h-16 rounded-full overflow-hidden">
+                  <div className={`absolute inset-0 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-blue-600/40 bg-gradient-to-br from-blue-500 to-blue-700 transition-opacity duration-300 ${imgLoaded ? 'opacity-0' : 'opacity-100'}`}>
+                    H
+                  </div>
+                  <Image
+                    src="/photo-avatar.webp"
+                    alt="Hector Noguera"
+                    fill
+                    className={`object-cover object-[center_20%] rounded-full transition-opacity duration-500 ${imgLoaded ? 'opacity-100' : 'opacity-0'}`}
+                    onLoad={() => setImgLoaded(true)}
+                  />
+                </div>
               <div>
                 <p className="text-white font-semibold">Hector Noguera</p>
                 <p className="text-white/40 text-sm">Full Stack Developer</p>

@@ -20,7 +20,7 @@ export default function Projects() {
             Desde startups hasta empresas establecidas, creo soluciones a medida
             que generan impacto real.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 hidden">
             <a
               href="#contacto"
               className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-200 shadow-lg shadow-blue-600/30 text-sm"

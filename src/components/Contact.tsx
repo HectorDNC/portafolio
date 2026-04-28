@@ -39,25 +39,24 @@ const contactInfo = [
           d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
         />
       </svg>
-    ),
-    label: "LinkedIn",
-    value: "linkedin.com/in/hector-noguera-c",
-    href: "https://www.linkedin.com/in/hector-noguera-c/",
-  },
-  {
-    icon: (
+        ),
+        label: "LinkedIn",
+        value: "linkedin.com/in/hector-noguera-c",
+        href: "https://www.linkedin.com/in/hector-noguera-c/",
+      },
+      {
+        icon: (
       <svg
         width="20"
         height="20"
-        fill="none"
         viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={1.5}
+        fill="currentColor"
+        aria-hidden="true"
       >
         <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+          fillRule="evenodd"
+          d="M12 .296a12 12 0 00-3.793 23.412c.6.111.82-.261.82-.58 0-.287-.01-1.047-.015-2.055-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.492.997.108-.775.418-1.305.76-1.605-2.666-.304-5.466-1.333-5.466-5.931 0-1.309.468-2.379 1.235-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.323 3.301 1.23a11.5 11.5 0 016.004 0c2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.243 2.874.12 3.176.77.842 1.234 1.912 1.234 3.221 0 4.61-2.804 5.624-5.476 5.921.43.372.815 1.1.815 2.222 0 1.605-.015 2.898-.015 3.293 0 .322.216.697.825.579A12 12 0 0012 .296z"
+          clipRule="evenodd"
         />
       </svg>
     ),
@@ -79,7 +78,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-20 overflow-hidden">
+    <section id="contact" className="relative pt-20 pb-10 overflow-hidden">
       {/* Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-80 bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
 
@@ -98,9 +97,9 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-12 items-start">
+        <div className="grid lg:grid-cols-6 gap-12 items-center">
           {/* Contact info */}
-          <div className="lg:col-span-2 flex flex-col gap-6">
+          <div className="lg:col-span-3 flex flex-col gap-6">
             <h3 className="text-white font-semibold text-xl">
               Información de contacto
             </h3>
