@@ -54,8 +54,8 @@ export default function ProjectsPage() {
             </Link>
           </div>
 
-          <Footer />
-        </section>
+          </section>
+        <Footer />
       </main>
     </>
   );

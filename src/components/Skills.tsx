@@ -106,7 +106,7 @@ export default function Skills() {
           </p>
           <div className="mt-8">
             <a
-              href="#proyectos"
+              href="#projects"
               className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-200 shadow-lg shadow-blue-600/30 text-sm"
             >
               Ver Proyectos
