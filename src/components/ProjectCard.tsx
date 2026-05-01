@@ -43,7 +43,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         <div className="absolute top-4 right-4">
           <span
-            className="rounded-2xl border border-[#25467a]/55 bg-[#06112a]/78 px-4 py-2 text-sm font-medium text-[#d9e6ff] shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur-xl"
+            className="rounded-2xl border border-[#25467a]/55 bg-[#06112a]/78 px-3 py-2 text-xs font-small text-[#d9e6ff] shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur-xl"
           >
             {project.category}
           </span>

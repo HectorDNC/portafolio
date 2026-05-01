@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { projectsSummary } from "../utils/data/projectsData";
+import { projects, projectsSummary } from "../utils/data/projectsData";
 import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
@@ -53,24 +53,26 @@ export default function Projects() {
         </div>
 
         {/* See more projects link */}
-        <div className="mt-10 text-center">
-          <Link
-            href="/projects"
-            className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white font-semibold px-6 py-2.5 rounded-full transition-all duration-200 text-sm"
-          >
-            Ver más proyectos
-            <svg
-              width="16"
-              height="16"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
+        {projectsSummary.length > 0 && projects.length > projectsSummary.length && (
+          <div className="mt-10 text-center">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white font-semibold px-6 py-2.5 rounded-full transition-all duration-200 text-sm"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
-        </div>
+              Ver más proyectos
+              <svg
+                width="16"
+                height="16"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

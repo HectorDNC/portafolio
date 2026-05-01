@@ -5,58 +5,76 @@ import Link from "next/link";
 const experience = [
   {
     role: "Desarrollador Full Stack",
-    company: "Freelance / Proyectos Propios",
-    period: "2022 — Presente",
-    location: "Remoto",
-    description:
-      "Desarrollo de aplicaciones web completas para clientes internacionales. Construcción de APIs REST con Spring Boot y frontends con Angular y React. Implementación de soluciones cloud en AWS con CI/CD.",
-    tags: ["Spring Boot", "React", "Angular", "AWS", "Docker"],
+    company: "Nexus Logistics",
+    period: "Junio 2023 – Febrero 2026",
+    location: "Chile",
+    highlights: [
+      "Diseñé e implementé procesos automatizados para operaciones logísticas y contables.",
+      "Desarrollé servicios backend con Spring Boot para el manejo de datos críticos.",
+      "Construí interfaces internas en Angular para optimizar flujos operativos.",
+      "Reduje errores operativos mediante validaciones y automatización de procesos.",
+      "Implementé pipelines de CI/CD con Jenkins.",
+      "Gestioné despliegues y monitoreo de servicios en AWS.",
+    ],
+    tags: ["Java", "Spring Boot", "Angular", "Jenkins", "AWS"],
   },
   {
-    role: "Desarrollador Backend",
-    company: "Empresa de Software",
-    period: "2020 — 2022",
-    location: "Venezuela",
-    description:
-      "Desarrollo y mantenimiento de microservicios en Java con Spring Boot. Integración con bases de datos relacionales y no relacionales. Trabajo en equipo bajo metodologías ágiles (Scrum).",
-    tags: ["Java", "Spring Boot", "PostgreSQL", "MongoDB", "Scrum"],
+    role: "Desarrollador Full Stack",
+    company: "Ideadecoders – HomeworkHelp",
+    period: "Febrero 2022 – Mayo 2023",
+    location: "Panamá",
+    highlights: [
+      "Desarrollé una plataforma educativa con React y Spring Boot.",
+      "Integré funcionalidades de videoconferencia para clases en línea.",
+      "Implementé el sistema de pagos para la plataforma.",
+    ],
+    tags: ["React", "Java", "Spring Boot", "WebRTC", "Pagos"],
   },
   {
-    role: "Desarrollador Frontend",
-    company: "Startup Tech",
-    period: "2019 — 2020",
+    role: "Desarrollador Full Stack",
+    company: "Versa Studio",
+    period: "Enero 2021 – Enero 2022",
     location: "Venezuela",
-    description:
-      "Construcción de interfaces de usuario con Angular y desarrollo de componentes reutilizables. Consumo de APIs REST y gestión de estado con RxJS.",
-    tags: ["Angular", "TypeScript", "RxJS", "HTML/CSS"],
+    highlights: [
+      "Desarrollé un sistema de pedidos para restaurantes.",
+      "Creé APIs REST con Node.js y Express para la gestión de órdenes.",
+      "Mejoré el flujo operativo del proceso de pedidos.",
+    ],
+    tags: ["React", "Node.js", "Express", "APIs REST"],
   },
 ];
 
 const education = [
   {
-    degree: "Ingeniería en Informática",
-    institution: "Universidad Nacional",
-    period: "2015 — 2020",
-    description:
-      "Formación en ciencias de la computación, algoritmos, estructuras de datos, bases de datos, redes y desarrollo de software.",
+    degree: "Ingeniero en Informática",
+    institution: "Universidad Politécnica Territorial Andrés Eloy Blanco",
+    period: "2017 - 2022",
+    description: "",
   },
   {
-    degree: "Certificación AWS Cloud Practitioner",
-    institution: "Amazon Web Services",
-    period: "2023",
-    description:
-      "Fundamentos de cloud computing, servicios AWS, seguridad, arquitectura y facturación en la nube.",
+    degree: "TSU en Informática",
+    institution: "Universidad Politécnica Territorial Andrés Eloy Blanco",
+    period: "2017 - 2020",
+    description: "",
   },
 ];
 
 const skillGroups = [
   {
-    category: "Backend",
+    category: "Lenguajes",
     color: "from-orange-500/20 to-red-500/10",
     border: "border-orange-500/20",
     accent: "text-orange-400",
     dot: "bg-orange-400",
-    items: ["Java", "Spring Boot", "Spring Security", "JPA / Hibernate", "Node.js", "Express.js"],
+    items: ["Java", "JavaScript", "PHP", "SQL"],
+  },
+  {
+    category: "Backend",
+    color: "from-purple-500/20 to-violet-500/10",
+    border: "border-purple-500/20",
+    accent: "text-purple-400",
+    dot: "bg-purple-400",
+    items: ["Spring Boot", "Node.js", "Express.js"],
   },
   {
     category: "Frontend",
@@ -64,15 +82,7 @@ const skillGroups = [
     border: "border-cyan-500/20",
     accent: "text-cyan-400",
     dot: "bg-cyan-400",
-    items: ["Angular", "React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
-  },
-  {
-    category: "Base de Datos",
-    color: "from-purple-500/20 to-violet-500/10",
-    border: "border-purple-500/20",
-    accent: "text-purple-400",
-    dot: "bg-purple-400",
-    items: ["PostgreSQL", "MySQL", "MongoDB"],
+    items: ["Angular", "React", "Next.js"],
   },
   {
     category: "DevOps & Cloud",
@@ -80,23 +90,44 @@ const skillGroups = [
     border: "border-green-500/20",
     accent: "text-green-400",
     dot: "bg-green-400",
-    items: ["AWS", "Docker", "Git / GitHub", "CI/CD", "Linux"],
+    items: ["AWS", "Jenkins (CI/CD)", "Docker"],
+  },
+  {
+    category: "Bases de datos",
+    color: "from-fuchsia-500/20 to-pink-500/10",
+    border: "border-fuchsia-500/20",
+    accent: "text-fuchsia-400",
+    dot: "bg-fuchsia-400",
+    items: ["MySQL", "PostgreSQL", "MongoDB"],
   },
 ];
 
 const languages = [
   { name: "Español", level: "Nativo", percent: 100 },
-  { name: "Inglés", level: "Intermedio (B1)", percent: 60 },
+  { name: "Inglés", level: "B1 (Intermedio)", percent: 60 },
 ];
 
 const softSkills = [
   "Trabajo en equipo",
+  "Análisis de requisitos",
+  "Metodologías Ágiles",
   "Comunicación efectiva",
   "Resolución de problemas",
   "Aprendizaje continuo",
-  "Metodologías Ágiles",
-  "Atención al detalle",
 ];
+
+const courses = [
+  { title: "Inglés", provider: "Academia Knock Knowledge", period: "Enero 2025 - Actualidad" },
+  { title: "Herramientas de Oficina", provider: "Academia de Software CADIF1", period: "Mayo 2019" },
+  { title: "Programación en PHP y MySQL", provider: "Udemy", period: "Junio 2019" },
+  { title: "Angular", provider: "Udemy", period: "Octubre 2022" },
+];
+
+const fullName = "Hector Noguera";
+const title = "Desarrollador Full Stack (Java + Angular) | Ingeniero en Informática";
+const birthDate = "10/02/2000";
+const phone = "+58 4125365957";
+const location = "Venezuela (Remoto)";
 
 export default function ResumePage() {
   return (
@@ -118,7 +149,7 @@ export default function ResumePage() {
               Resumen Profesional
             </h1>
             <p className="mx-auto max-w-xl text-base leading-relaxed text-white/45 md:text-lg">
-              Más de 5 años construyendo software robusto, escalable y de alta calidad.
+              Desarrollador Full Stack con foco en impacto de negocio, escalabilidad y eficiencia operativa.
             </p>
           </div>
 
@@ -128,16 +159,25 @@ export default function ResumePage() {
               HN
             </div>
             <div className="flex-1">
-              <h2 className="text-2xl font-semibold text-white mb-1">Hector Noguera</h2>
-              <p className="text-blue-400 font-medium mb-3">Desarrollador Full Stack</p>
+              <h2 className="text-2xl font-semibold text-white mb-1">{fullName}</h2>
+              <p className="text-blue-400 font-medium mb-1">{title}</p>
+              <p className="text-white/40 text-xs mb-3">Ubicación: {location}</p>
               <p className="text-white/50 text-sm leading-relaxed max-w-2xl">
-                Desarrollador Full Stack con más de 5 años de experiencia construyendo software robusto y escalable.
-                Especializado en Java, Spring Boot, Angular y React con fuerte enfoque en calidad y procesos ágiles.
-                Apasionado por crear soluciones eficientes y bien estructuradas que aporten valor real a los usuarios.
+                Desarrollador Full Stack con más de 5 años de experiencia en la construcción de aplicaciones web escalables utilizando Java (Spring Boot) y Angular. Sólida experiencia en arquitectura backend, automatización de procesos y despliegues en la nube (AWS). Enfocado en mejorar la eficiencia operativa y reducir errores en sistemas críticos de negocio. Experiencia trabajando con equipos internacionales en Chile y Panamá.
               </p>
               <div className="flex flex-wrap gap-3 mt-5">
                 <a
-                  href="mailto:hector.noguera03@gmail.com"
+                  href={`tel:${phone.replace(/\s+/g, "")}`}
+                  className="flex items-center gap-2 text-xs text-white/50 hover:text-white/80 transition-colors"
+                >
+                  <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2 7a2 2 0 012-2h3a2 2 0 012 2v0a2 2 0 01-2 2H4v3a9 9 0 009 9h3v-2a2 2 0 012-2h0a2 2 0 012 2v3a2 2 0 01-2 2H6a4 4 0 01-4-4V7z" />
+                  </svg>
+                  {phone}
+                </a>
+                <span className="text-white/15">•</span>
+                <a
+                  href={`mailto:hector.noguera03@gmail.com`}
                   className="flex items-center gap-2 text-xs text-white/50 hover:text-white/80 transition-colors"
                 >
                   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -157,14 +197,6 @@ export default function ResumePage() {
                   </svg>
                   linkedin.com/in/hector-noguera-c
                 </a>
-                <span className="text-white/15">•</span>
-                <span className="flex items-center gap-2 text-xs text-white/50">
-                  <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                  </svg>
-                  Venezuela · Disponible para trabajo remoto
-                </span>
               </div>
             </div>
             <a
@@ -202,7 +234,14 @@ export default function ResumePage() {
                       <span className="text-white/25 text-xs">{exp.location}</span>
                     </div>
                   </div>
-                  <p className="text-white/45 text-sm leading-relaxed mb-4">{exp.description}</p>
+                  <ul className="mb-4 space-y-1.5">
+                    {exp.highlights.map((highlight) => (
+                      <li key={highlight} className="flex items-start gap-2 text-white/45 text-sm leading-relaxed">
+                        <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-blue-400/80 flex-shrink-0" />
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
                   <div className="flex flex-wrap gap-2">
                     {exp.tags.map((tag) => (
                       <span
@@ -233,8 +272,8 @@ export default function ResumePage() {
                     <div key={i} className="card-dark rounded-2xl p-5">
                       <h4 className="text-white font-semibold text-sm mb-0.5">{edu.degree}</h4>
                       <p className="text-blue-400 text-xs font-medium mb-1">{edu.institution}</p>
-                      <p className="text-white/25 text-xs font-mono mb-2">{edu.period}</p>
-                      <p className="text-white/40 text-xs leading-relaxed">{edu.description}</p>
+                      {edu.period && <p className="text-white/25 text-xs font-mono mb-2">{edu.period}</p>}
+                      {edu.description && <p className="text-white/40 text-xs leading-relaxed">{edu.description}</p>}
                     </div>
                   ))}
                 </div>
@@ -266,7 +305,28 @@ export default function ResumePage() {
                 </div>
               </div>
 
-              {/* Soft skills */}
+                {/* Cursos Realizados */}
+                <div>
+                  <h3 className="text-xs font-semibold uppercase tracking-widest text-white/30 mb-4 flex items-center gap-2">
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v8m0 0l-3-3m3 3l3-3M3 20h18" />
+                    </svg>
+                    Cursos Realizados
+                  </h3>
+                  <div className="card-dark rounded-2xl p-5 space-y-3">
+                    {courses.map((c, idx) => (
+                      <div key={idx} className="text-xs">
+                        <div className="flex justify-between items-center">
+                          <span className="text-white/70">{c.title}</span>
+                          <span className="text-white/30 text-xs">{c.period}</span>
+                        </div>
+                        <div className="text-white/30 text-xs">{c.provider}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Soft skills */}
               <div>
                 <h3 className="text-xs font-semibold uppercase tracking-widest text-white/30 mb-4 flex items-center gap-2">
                   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -298,11 +358,11 @@ export default function ResumePage() {
               </svg>
               Habilidades Técnicas
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
               {skillGroups.map((group) => (
                 <div
                   key={group.category}
-                  className={`card-dark rounded-2xl p-5 bg-gradient-to-br ${group.color} border ${group.border}`}
+                  className={`card-dark mx-4 sm:mx-0 rounded-2xl p-5 bg-gradient-to-br ${group.color} border ${group.border}`}
                 >
                   <h4 className={`text-sm font-semibold mb-4 ${group.accent}`}>{group.category}</h4>
                   <ul className="space-y-2">
