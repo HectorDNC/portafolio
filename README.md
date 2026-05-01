@@ -1,5 +1,35 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Resumen del Portafolio
+
+Portafolio profesional de **Hector Noguera**, **Desarrollador Full Stack (Java + Angular)** con más de 5 años de experiencia construyendo soluciones web escalables para entornos de logística, contabilidad, educación y restauración.
+
+Este proyecto presenta experiencia real en desarrollo end-to-end, con foco en impacto operativo: automatización de procesos, reducción de errores, integración de pagos y despliegues en la nube.
+
+### Perfil Profesional
+
+- Experiencia internacional colaborando con equipos en Chile y Panamá.
+- Especialización en backend con `Java` y `Spring Boot`, y frontend con `Angular` y `React`.
+- Enfoque en eficiencia operativa, arquitectura robusta y sistemas críticos de negocio.
+- Prácticas de entrega continua y operación en producción con `Jenkins` y `AWS`.
+
+### Proyectos Destacados
+
+- Sistemas de gestión logística y contable con trazabilidad, reportes y automatizaciones.
+- Portal de clientes para consulta en tiempo real de envíos, facturas y pagos.
+- Plataforma educativa con videoconferencias y sistema de pagos.
+- Sistema de pedidos para restaurantes con gestión de órdenes en tiempo real.
+
+### Stack Tecnológico
+
+`Java` · `Spring Boot` · `Angular` · `React` · `Node.js` · `Express.js` · `TypeScript` · `Next.js` · `SQL` · `MySQL` · `PostgreSQL` · `AWS` · `Jenkins` · `Docker`
+
+### Contacto
+
+- Email: `hector.noguera03@gmail.com`
+- LinkedIn: https://www.linkedin.com/in/hector-noguera-c/
+- Ubicación: `Venezuela (Remoto)`
+
 ## Getting Started
 
 First, run the development server:

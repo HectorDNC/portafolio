@@ -171,7 +171,7 @@ export default function ResumePage() {
                   className="flex items-center gap-2 text-xs text-white/50 hover:text-white/80 transition-colors"
                 >
                   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2 7a2 2 0 012-2h3a2 2 0 012 2v0a2 2 0 01-2 2H4v3a9 9 0 009 9h3v-2a2 2 0 012-2h0a2 2 0 012 2v3a2 2 0 01-2 2H6a4 4 0 01-4-4V7z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.09 4.18 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72c.12 1.05.36 2.07.72 3.03a2 2 0 0 1-.45 2.11L8.91 11.09a16 16 0 0 0 6 6l1.23-1.38a2 2 0 0 1 2.11-.45c.96.36 1.98.6 3.03.72A2 2 0 0 1 22 16.92z" />
                   </svg>
                   {phone}
                 </a>

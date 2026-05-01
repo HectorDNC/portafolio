@@ -18,7 +18,7 @@ export const projects: Project[] = [
     description:
       "Plataforma logística para manejo procesos de exportación e importación, reportes precisos y reducción de errores operativos. Desarrollado para Nexus Logistics (Chile).",
     category: "Logistics System",
-    tech: ["Spring Boot", "Angular", "SQL", "AWS", "Jenkins"],
+    tech: ["Spring Boot", "Angular", "SQL", "AWS", "Jenkins", "Docker"],
     gradient: "from-blue-500/20 to-cyan-600/20",
     accent: "bg-blue-500/10 text-blue-300 border-blue-500/20",
     year: "2024",
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     description:
       "Plataforma contable con procesos de facturación, gestión de cobros y pagos, reportes precisos y mejoras en la eficiencia contable.",
     category: "Financial System",
-    tech: ["Spring Boot", "Angular", "SQL", "AWS", "Jenkins"],
+    tech: ["Spring Boot", "Angular", "SQL", "AWS", "Jenkins", "Docker"],
     gradient: "from-blue-500/20 to-cyan-600/20",
     accent: "bg-blue-500/10 text-blue-300 border-blue-500/20",
     year: "2024",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     description:
       "Sistema integrado de consulta para clientes que acceden a información de logística y contabilidad. Visualización de estados de envíos, facturas, pagos y reportes en tiempo real.",
     category: "Customer Platform",
-    tech: ["Spring Boot", "Angular", "SQL", "AWS"],
+    tech: ["Spring Boot", "Angular", "SQL", "AWS", "Jenkins", "Docker"],
     gradient: "from-indigo-500/20 to-blue-600/20",
     accent: "bg-indigo-500/10 text-indigo-300 border-indigo-500/20",
     year: "2025",
