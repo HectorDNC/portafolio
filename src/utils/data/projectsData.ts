@@ -18,12 +18,12 @@ export const projects: Project[] = [
     description:
       "Plataforma logística para manejo procesos de exportación e importación, reportes precisos y reducción de errores operativos. Desarrollado para Nexus Logistics (Chile).",
     category: "Logistics System",
-    tech: ["Spring Boot", "Angular", "SQL", "AWS", "Jenkins", "Docker"],
+    tech: ["Spring Boot", "Angular", "SQL", "AWS", "Jenkins", "Docker", "Keycloak"],
     gradient: "from-blue-500/20 to-cyan-600/20",
     accent: "bg-blue-500/10 text-blue-300 border-blue-500/20",
     year: "2024",
-    link: "#",
-    // img: "/projects/project1.png",
+    link: "",
+    img: "/projects/project-operations.webp",
   },
   {
     id: 2,
@@ -31,11 +31,12 @@ export const projects: Project[] = [
     description:
       "Plataforma contable con procesos de facturación, gestión de cobros y pagos, reportes precisos y mejoras en la eficiencia contable.",
     category: "Financial System",
-    tech: ["Spring Boot", "Angular", "SQL", "AWS", "Jenkins", "Docker"],
+    tech: ["Spring Boot", "Angular", "SQL", "AWS", "Jenkins", "Docker", "Keycloak"],
     gradient: "from-blue-500/20 to-cyan-600/20",
     accent: "bg-blue-500/10 text-blue-300 border-blue-500/20",
-    year: "2024",
-    link: "#",
+    year: "2025",
+    link: "",
+    img: "/projects/project-accounting.webp",
   },
   {
     id: 3,
@@ -47,7 +48,8 @@ export const projects: Project[] = [
     gradient: "from-indigo-500/20 to-blue-600/20",
     accent: "bg-indigo-500/10 text-indigo-300 border-indigo-500/20",
     year: "2025",
-    link: "#",
+    link: "",
+    img: "/projects/project-clients.webp",
   },
   {
     id: 4,
@@ -58,8 +60,9 @@ export const projects: Project[] = [
     tech: ["React JS", "Spring Boot", "PostgreSQL", "Pasarela de Pagos"],
     gradient: "from-purple-500/20 to-pink-600/20",
     accent: "bg-purple-500/10 text-purple-300 border-purple-500/20",
-    year: "2025",
-    link: "#",
+    year: "2023",
+    link: "",
+    img: "/projects/project-homework.webp",
   },
   {
     id: 5,
@@ -70,8 +73,9 @@ export const projects: Project[] = [
     tech: ["React JS", "Node.js", "Express.js", "MySQL"],
     gradient: "from-orange-500/20 to-red-600/20",
     accent: "bg-orange-500/10 text-orange-300 border-orange-500/20",
-    year: "2025",
-    link: "#",
+    year: "2022",
+    link: "",
+    img: "/projects/project-orders.webp",
   },
   {
     id: 6,
@@ -83,7 +87,8 @@ export const projects: Project[] = [
     gradient: "from-green-500/20 to-emerald-600/20",
     accent: "bg-green-500/10 text-green-300 border-green-500/20",
     year: "2021",
-    link: "#",
+    link: "",
+    img: "/projects/project-worldcomputer.webp",
   },
 ];
 

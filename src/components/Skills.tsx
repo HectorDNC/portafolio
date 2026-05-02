@@ -30,7 +30,7 @@ const skills = [
     name: "React JS",
     subtitle: "UI Library",
     description:
-      "Aplicaciones SPA y multiplataforma con React, hooks, context y gestión de estado avanzada.",
+      "Aplicaciones SPA y multiplataforma con React y Next.js, hooks, context y gestión de estado avanzada.",
     icon: "⚛",
     bg: "from-cyan-400 to-blue-500",
     shadow: "shadow-cyan-500/20",
@@ -79,6 +79,15 @@ const skills = [
     icon: "⚙",
     bg: "from-slate-500 to-slate-700",
     shadow: "shadow-slate-500/20",
+  },
+  {
+    name: "PHP",
+    subtitle: "Backend",
+    description:
+      "Desarrollo de aplicaciones web y APIs con PHP, aplicando buenas prácticas de arquitectura, seguridad y rendimiento.",
+    icon: "🐘",
+    bg: "from-indigo-500 to-purple-600",
+    shadow: "shadow-indigo-500/20",
   },
 ];
 
