@@ -91,12 +91,68 @@ const contactInfo = [
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [copied, setCopied] = useState<string | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSent(true);
     setForm({ name: "", email: "", message: "" });
     setTimeout(() => setSent(false), 4000);
+  };
+
+  const copyToClipboard = async (
+    text: string,
+    label?: string,
+    href?: string
+  ) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(label ?? text);
+      // Si hay un href (mailto:), abrir una pestaña en blanco inmediatamente
+      // y navegar a ella tras 1s — esto evita que el navegador bloquee la apertura
+      if (href) {
+        setTimeout(() => {
+          try {
+            const newWin = window.open("", "_blank");
+            if (newWin) {
+              newWin.location.href = href;
+            } else {
+              // Fallback: navegar en la misma pestaña
+              window.location.href = href;
+            }
+          } catch (err) {
+            console.error("Error navegando a href", err);
+          }
+        }, 1000);
+      }
+      setTimeout(() => setCopied(null), 3000);
+    } catch (err) {
+      console.error("Error copiando al portapapeles", err);
+    }
+  };
+
+  const handleContactClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    label: string,
+    value: string,
+    href?: string
+  ) => {
+    if (label === "Email") {
+      e.preventDefault();
+      copyToClipboard(value, label, href);
+    }
+  };
+
+  const handleContactKeyDown = (
+    e: React.KeyboardEvent<HTMLAnchorElement>,
+    label: string,
+    value: string,
+    href?: string
+  ) => {
+    if (label === "Email" && (e.key === "Enter" || e.key === " ")) {
+      e.preventDefault();
+      copyToClipboard(value, label, href);
+    }
   };
 
   return (
@@ -135,16 +191,22 @@ export default function Contact() {
                 <a
                   key={label}
                   href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={"_blank"}
+                  rel={label === "Email" ? undefined : "noopener noreferrer"}
+                  onClick={(e) => handleContactClick(e, label, value, href)}
+                  onKeyDown={(e) => handleContactKeyDown(e, label, value, href)}
                   className="flex items-center gap-4 p-4 card-dark rounded-xl group"
+                  role={label === "Email" ? "button" : undefined}
+                  tabIndex={0}
                 >
                   <div className="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400 group-hover:bg-blue-600/30 transition-colors flex-shrink-0">
                     {icon}
                   </div>
                   <div>
                     <p className="text-white/30 text-xs mb-0.5">{label}</p>
-                    <p className="text-white text-sm font-medium">{value}</p>
+                    <p className="text-white text-sm font-medium">
+                      {label === "Email" && copied === "Email" ? "Copiado!" : value}
+                    </p>
                   </div>
                   <svg
                     width="16"
