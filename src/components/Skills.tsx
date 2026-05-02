@@ -7,6 +7,7 @@ const skills = [
     icon: "☕",
     bg: "from-orange-500 to-red-600",
     shadow: "shadow-orange-500/20",
+    level: 90,
   },
   {
     name: "Spring Boot",
@@ -16,6 +17,7 @@ const skills = [
     icon: "🌱",
     bg: "from-green-500 to-green-700",
     shadow: "shadow-green-500/20",
+    level: 90,
   },
   {
     name: "Angular",
@@ -25,6 +27,7 @@ const skills = [
     icon: "▲",
     bg: "from-red-500 to-rose-700",
     shadow: "shadow-red-500/20",
+    level: 85,
   },
   {
     name: "React JS",
@@ -34,6 +37,7 @@ const skills = [
     icon: "⚛",
     bg: "from-cyan-400 to-blue-500",
     shadow: "shadow-cyan-500/20",
+    level: 80,
   },
   {
     name: "Node.js",
@@ -43,15 +47,17 @@ const skills = [
     icon: "⬡",
     bg: "from-green-400 to-emerald-600",
     shadow: "shadow-emerald-500/20",
+    level: 75,
   },
   {
     name: "JavaScript",
     subtitle: "Lenguaje",
     description:
-      "Dominio avanzado de JS moderno: ES6+, programación funcional, async/await y patrones.",
+      "Dominio avanzado de JS moderno: ES6+ y Typescript, programación funcional, async/await y patrones.",
     icon: "JS",
     bg: "from-yellow-400 to-yellow-600",
     shadow: "shadow-yellow-500/20",
+    level: 90,
   },
   {
     name: "SQL",
@@ -61,6 +67,7 @@ const skills = [
     icon: "🗄",
     bg: "from-blue-400 to-indigo-600",
     shadow: "shadow-indigo-500/20",
+    level: 90,
   },
   {
     name: "AWS",
@@ -70,6 +77,7 @@ const skills = [
     icon: "☁",
     bg: "from-orange-400 to-amber-600",
     shadow: "shadow-amber-500/20",
+    level: 60,
   },
   {
     name: "Jenkins",
@@ -79,6 +87,7 @@ const skills = [
     icon: "⚙",
     bg: "from-slate-500 to-slate-700",
     shadow: "shadow-slate-500/20",
+    level: 80,
   },
   {
     name: "PHP",
@@ -88,6 +97,7 @@ const skills = [
     icon: "🐘",
     bg: "from-indigo-500 to-purple-600",
     shadow: "shadow-indigo-500/20",
+    level: 75,
   },
 ];
 
@@ -173,7 +183,7 @@ export default function Skills() {
               <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
                 <div
                   className={`h-full bg-gradient-to-r ${skill.bg} rounded-full`}
-                  style={{ width: `${75 + Math.random() * 20}%` }}
+                  style={{ width: `${skill.level}%` }}
                 />
               </div>
             </div>

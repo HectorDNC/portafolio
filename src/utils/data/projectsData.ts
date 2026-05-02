@@ -81,7 +81,7 @@ export const projects: Project[] = [
     id: 6,
     title: "Sistema de Inventario y Ventas",
     description:
-      "Diciembre 2020 – Enero 2021. Sistema web para control de inventario y ventas para negocio de equipos tecnológicos. Desarrollado para World Computer (Venezuela).",
+      "Sistema web para control de inventario y ventas para negocio de equipos tecnológicos. Desarrollado para World Computer (Venezuela).",
     category: "Inventory & Sales System",
     tech: ["PHP", "JavaScript", "PostgreSQL", "Bootstrap"],
     gradient: "from-green-500/20 to-emerald-600/20",

@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { Project } from "@/utils/data/projectsData";
 import { Tooltip } from "react-tooltip";
 import Image from "next/image";
+import ProjectModal from "@/components/ProjectModal";
 
 type ProjectCardProps = {
   project: Project;
@@ -12,9 +13,12 @@ type ProjectCardProps = {
 export default function ProjectCard({ project }: ProjectCardProps) {
   const [isHovering, setIsHovering] = useState(false);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <article className="group rounded-[26px] border border-blue-500/20 bg-[#030716] p-2 shadow-[0_20px_50px_rgba(2,8,32,0.45),inset_0_10px_10px_-1px_rgba(0,85,255,0.1)] transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/40">
+    <>
+    {modalOpen && <ProjectModal project={project} onClose={() => setModalOpen(false)} />}
+    <article className="group rounded-[26px] border border-blue-500/20 bg-[#030716] p-2 shadow-[0_20px_50px_rgba(2,8,32,0.45),inset_0_10px_10px_-1px_rgba(0,85,255,0.1)] transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/40 cursor-pointer" onClick={() => setModalOpen(true)}>
       <div
         className="relative h-56 overflow-hidden rounded-[20px] border border-white/10 lg:h-60"
         onMouseEnter={() => setIsHovering(true)}
@@ -45,9 +49,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         )}
 
         <div className={`absolute ${project.img ? "" : "inset-0"} bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.18),_transparent_55%)]`} />
-        {project.link && project.link != '' && (
-          <a href={project.link} className="absolute" aria-label={`Ver ${project.title}`} />
-        )}
 
         <div className="absolute top-3.5 right-3.5">
           <span
@@ -58,7 +59,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         <span
-          className="hidden pointer-events-none absolute z-20 rounded-full bg-white px-4 py-2 text-xs font-semibold text-black shadow-md transition-opacity duration-150"
+          className="pointer-events-none absolute z-20 rounded-full bg-white px-4 py-2 text-xs font-semibold text-black shadow-md transition-opacity duration-150"
           style={{
             left: cursor.x,
             top: cursor.y,
@@ -107,5 +108,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
     </article>
+    </>
   );
 }
