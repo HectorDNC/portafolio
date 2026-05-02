@@ -6,7 +6,7 @@ const experience = [
   {
     role: "Desarrollador Full Stack",
     company: "Nexus Logistics",
-    period: "Junio 2023 – Febrero 2026",
+    period: "Junio 2023 – Marzo 2026",
     location: "Chile",
     highlights: [
       "Diseñé e implementé procesos automatizados para operaciones logísticas y contables.",
@@ -202,7 +202,7 @@ export default function ResumePage() {
             <a
               href="/CV-HectorNoguera.pdf"
               download
-              className="flex-shrink-0 flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200 shadow-lg shadow-blue-600/30 whitespace-nowrap"
+              className="hidden flex-shrink-0 flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200 shadow-lg shadow-blue-600/30 whitespace-nowrap"
             >
               <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
