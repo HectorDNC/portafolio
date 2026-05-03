@@ -112,9 +112,9 @@ export default function Hero() {
 
             <div className="space-y-3">
               {[
-                { label: "Proyectos", value: `10+`, color: "text-blue-400" },
                 { label: "Experiencia", value: `${new Date().getFullYear() - 2021}+ años`, color: "text-purple-400" },
-                { label: "Tecnologías", value: "12+", color: "text-green-400" },
+                { label: "Tecnologías", value: "10+", color: "text-green-400" },
+                { label: "Proyectos", value: `6+`, color: "text-blue-400" },
               ].map(({ label, value, color }) => (
                 <div
                   key={label}
