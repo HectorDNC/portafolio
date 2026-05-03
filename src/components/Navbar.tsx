@@ -144,10 +144,10 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden bg-black/95 border-t border-white/5 px-6 py-4 flex flex-col gap-2">
-          {navLinks.map(({ id, label }) => (
+          {navLinks.map(({ id, label, href }) => (
             <button
               key={id}
-              onClick={() => scrollTo(id)}
+              onClick={() => href ? redirectTo(href) : scrollTo(id)}
               className="text-left text-white/70 hover:text-white py-2.5 text-sm font-medium border-b border-white/5"
             >
               {label}
